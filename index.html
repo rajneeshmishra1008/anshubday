@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Anshu! ❤️ My Love</title>
+  
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Dancing+Script:wght@600;700&family=Great+Vibes&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Custom Font Styles for Names & Captions -->
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+    .friend-name {
+      font-family: 'Dancing Script', 'Alex Brush', cursive;
+      font-weight: 700;
+      color: #ff4d6d;
+    }
+    .your-name {
+      font-family: 'Great Vibes', 'Alex Brush', cursive;
+      font-size: 2.2rem;
+      letter-spacing: 1px;
+      color: #d4af37;
+    }
+    .handwritten-tag, .handwritten {
+      font-family: 'Dancing Script', cursive;
+    }
+  </style>
+
+  <!-- Libraries -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Custom Cursor (Desktop) -->
+  <div class="custom-cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursor-follower"></div>
+
+  <!-- Background Particle Canvas -->
+  <canvas id="particle-canvas"></canvas>
+
+  <!-- 1. INTRO / LOADING SCREEN -->
+  <section id="loading-screen" class="active">
+    <div class="intro-content">
+      <div class="message-container">
+        <p class="intro-msg step-1">I made something special for the love of my life...</p>
+        <p class="intro-msg step-2">Someone who makes my heart beat faster every single day.</p>
+        <p class="intro-msg step-3">This is all for you, Anshu. ❤️</p>
+      </div>
+      <button id="open-surprise-btn" class="magical-btn">
+        <span>Open Your Surprise</span>
+        <i class="fa-solid fa-heart"></i>
+      </button>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT CONTAINER -->
+  <main id="main-content">
+
+    <!-- 2. HERO SECTION -->
+    <section id="hero" class="hero-section">
+      <div class="hero-bg-overlay"></div>
+      <div class="hero-container">
+        <div class="hero-image-wrapper" data-aos="zoom-in" data-aos-duration="1500">
+          <img src="photo12.jpeg" alt="Anshu's Photograph" class="hero-photo" id="hero-img">
+          <div class="hero-light-leak"></div>
+        </div>
+        <div class="hero-text" data-aos="fade-up" data-aos-delay="300">
+          <h1 class="hero-title">Happy Birthday, <span class="friend-name">Anshu</span> ❤️</h1>
+          <p class="hero-subtitle">
+            My gorgeous girlfriend, my forever love,<br>
+            My safe place, and the most precious beat of my heart.
+          </p>
+          <div class="scroll-indicator">
+            <p>Scroll down... a little love story is waiting for you, my queen.</p>
+            <i class="fa-solid fa-chevron-down bounce"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. THE GIRL BEHIND MY SMILES -->
+    <section id="photo-intro" class="section-padding">
+      <div class="container">
+        <h2 class="section-title text-center" data-aos="fade-up"><span class="friend-name">Anshu</span> — The Queen of My Heart</h2>
+        <p class="section-subtitle text-center" data-aos="fade-up" data-aos-delay="100">The magic you bring into my world...</p>
+
+        <div class="asymmetric-collage">
+          <div class="polaroid-card card-1" data-aos="fade-right" data-aos-delay="200">
+            <div class="polaroid-img-box">
+              <img src="photo5.jpeg" alt="Anshu Moment 1">
+            </div>
+            <div class="polaroid-caption">
+              <span>"My breathtaking girl ❤️"</span>
+              <small>Endless Love</small>
+            </div>
+          </div>
+
+          <div class="polaroid-card card-2" data-aos="fade-up" data-aos-delay="400">
+            <div class="polaroid-img-box">
+              <img src="photo15.jpeg" alt="Anshu Moment 2">
+            </div>
+            <div class="polaroid-caption">
+              <span>"The love of my life."</span>
+              <small>Pure Magic</small>
+            </div>
+          </div>
+
+          <div class="polaroid-card card-3" data-aos="fade-left" data-aos-delay="600">
+            <div class="polaroid-img-box">
+              <img src="photo10.jpeg" alt="Anshu Moment 3">
+            </div>
+            <div class="polaroid-caption">
+              <span>"How are you so gorgeous?"</span>
+              <small>My Everything</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. OUR MEMORY TIMELINE -->
+    <section id="timeline" class="section-padding">
+      <div class="container">
+        <h2 class="section-title text-center" data-aos="fade-up">Our Love Story Chapters</h2>
+        <div class="timeline-wrapper">
+          <div class="timeline-line"></div>
+
+          <!-- Timeline Item 1 -->
+          <div class="timeline-item left" data-aos="fade-right">
+            <div class="timeline-content" style="background: #ffffff; padding: 20px; border-radius: 16px; box-shadow: 0 10px 30px rgba(74, 21, 37, 0.08); width: 100%; box-sizing: border-box; overflow: hidden;">
+              <div class="timeline-photo" style="width: 100%; height: auto; border-radius: 12px; overflow: hidden; margin-bottom: 15px; position: relative; background-color: #fceade;">
+                <img src="photo12.jpeg" alt="The Beginning" style="width: 100%; height: auto; object-fit: cover; object-position: center; display: block; border-radius: 12px;">
+              </div>
+              <span class="timeline-date">Chapter I</span>
+              <h3>The Day We Met</h3>
+              <p>"The exact moment my eyes met yours, my heart knew you were meant to be mine."</p>
+            </div>
+          </div>
+
+          <!-- Timeline Item 2 -->
+          <div class="timeline-item right" data-aos="fade-left">
+            <div class="timeline-content" style="background: #ffffff; padding: 20px; border-radius: 16px; box-shadow: 0 10px 30px rgba(74, 21, 37, 0.08); width: 100%; box-sizing: border-box; overflow: hidden;">
+              <div class="timeline-photo" style="width: 100%; height: auto; border-radius: 12px; overflow: hidden; margin-bottom: 15px; position: relative; background-color: #fceade;">
+                <img src="photo18.jpeg" alt="Conversations" style="width: 100%; height: auto; object-fit: cover; object-position: center; display: block; border-radius: 12px;">
+              </div>
+              <span class="timeline-date">Chapter II</span>
+              <h3>Falling For You</h3>
+              <p>"Late-night calls and sweet messages turned into falling deeply and hopelessly in love with you."</p>
+            </div>
+          </div>
+
+          <!-- Timeline Item 3 -->
+          <div class="timeline-item left" data-aos="fade-right">
+            <div class="timeline-content" style="background: #ffffff; padding: 20px; border-radius: 16px; box-shadow: 0 10px 30px rgba(74, 21, 37, 0.08); width: 100%; box-sizing: border-box; overflow: hidden;">
+              <div class="timeline-photo" style="width: 100%; height: auto; border-radius: 12px; overflow: hidden; margin-bottom: 15px; position: relative; background-color: #fceade;">
+                <img src="photo13.jpeg" alt="The Laughs" style="width: 100%; height: auto; object-fit: cover; object-position: center; display: block; border-radius: 12px;">
+              </div>
+              <span class="timeline-date">Chapter III</span>
+              <h3>Your Cute Cuteness & Smiles</h3>
+              <p>"Your laugh is my absolute favorite sound in this entire universe."</p>
+            </div>
+          </div>
+
+          <!-- Timeline Item 4 -->
+          <div class="timeline-item right" data-aos="fade-left">
+            <div class="timeline-content" style="background: #ffffff; padding: 20px; border-radius: 16px; box-shadow: 0 10px 30px rgba(74, 21, 37, 0.08); width: 100%; box-sizing: border-box; overflow: hidden;">
+              <div class="timeline-photo" style="width: 100%; height: auto; border-radius: 12px; overflow: hidden; margin-bottom: 15px; position: relative; background-color: #fceade;">
+                <img src="photo14.jpeg" alt="The Comfort" style="width: 100%; height: auto; object-fit: cover; object-position: center; display: block; border-radius: 12px;">
+              </div>
+              <span class="timeline-date">Chapter IV</span>
+              <h3>My Safe Haven</h3>
+              <p>"In your arms is where I find total peace and realize how lucky I truly am."</p>
+            </div>
+          </div>
+
+          <!-- Timeline Item 5 -->
+          <div class="timeline-item left" data-aos="fade-right">
+            <div class="timeline-content" style="background: #ffffff; padding: 20px; border-radius: 16px; box-shadow: 0 10px 30px rgba(74, 21, 37, 0.08); width: 100%; box-sizing: border-box; overflow: hidden;">
+              <div class="timeline-photo" style="width: 100%; height: auto; border-radius: 12px; overflow: hidden; margin-bottom: 15px; position: relative; background-color: #fceade;">
+                <img src="photo17.jpeg" alt="Celebrating You" style="width: 100%; height: auto; object-fit: cover; object-position: center; display: block; border-radius: 12px;">
+              </div>
+              <span class="timeline-date">Today</span>
+              <h3>Celebrating My Girlfriend 🎉</h3>
+              <p>"Today is all about celebrating you, my gorgeous girl, and loving you even more than yesterday."</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. WHY YOU ARE MY COMFORT ZONE -->
+    <section id="comfort-zone" class="section-padding">
+      <div class="container">
+        <div class="section-header text-center" data-aos="fade-up">
+          <h2 class="section-title">Why You Mean Everything to Me, Anshu 💖</h2>
+          <p class="section-subtitle">A few reasons why you hold the absolute keys to my heart.</p>
+        </div>
+
+        <div class="cards-grid">
+          <div class="comfort-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="card-icon"><i class="fa-solid fa-heart"></i></div>
+            <h3>Your Endless Love 💖</h3>
+            <p>"The way you care for me and love me makes me feel like the luckiest boyfriend alive."</p>
+          </div>
+
+          <div class="comfort-card" data-aos="fade-up" data-aos-delay="150">
+            <div class="card-icon"><i class="fa-solid fa-face-grin-tears"></i></div>
+            <h3>Your Cute Pouts & Smiles 😂</h3>
+            <p>"Even when you get angry or cute, you look so adorable that I just fall in love all over again."</p>
+          </div>
+
+          <div class="comfort-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="card-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+            <h3>Understanding My Heart 🤍</h3>
+            <p>"You know me better than I know myself. You understand my silence and my words equally."</p>
+          </div>
+
+          <div class="comfort-card" data-aos="fade-up" data-aos-delay="250">
+            <div class="card-icon"><i class="fa-solid fa-moon"></i></div>
+            <h3>My Peace of Mind 🌙</h3>
+            <p>"Hearing your sweet voice after a long day is the only therapy my soul ever needs."</p>
+          </div>
+
+          <div class="comfort-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="card-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+            <h3>Your Magical Presence ✨</h3>
+            <p>"You light up my life in ways I never knew possible. You are my sunshine."</p>
+          </div>
+
+          <div class="comfort-card" data-aos="fade-up" data-aos-delay="350">
+            <div class="card-icon"><i class="fa-solid fa-hands-holding-circle"></i></div>
+            <h3>My Forever Support 🛡️</h3>
+            <p>"Standing by my side through everything, your belief in us gives me unmatched strength."</p>
+          </div>
+
+          <div class="comfort-card" data-aos="fade-up" data-aos-delay="400">
+            <div class="card-icon"><i class="fa-solid fa-box-archive"></i></div>
+            <h3>Romantic Dates & Memories 📸</h3>
+            <p>"Every single moment we spend together goes straight into my heart's favorite collection."</p>
+          </div>
+
+          <div class="comfort-card" data-aos="fade-up" data-aos-delay="450">
+            <div class="card-icon"><i class="fa-solid fa-infinity"></i></div>
+            <h3>My Future & Forever ♾️</h3>
+            <p>"I want to spend all my tomorrows holding your hand, loving you endlessly."</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. PHOTO MEMORY GALLERY -->
+    <section id="gallery" class="section-padding">
+      <div class="container">
+        <h2 class="section-title text-center" data-aos="fade-up">Anshu's Gorgeous Album 📖</h2>
+        
+        <!-- Category Filter -->
+        <div class="gallery-filter" data-aos="fade-up">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="favorites">Romantic Moments</button>
+          <button class="filter-btn" data-filter="crazy">Cute & Silly</button>
+          <button class="filter-btn" data-filter="beautiful">My Gorgeous Queen</button>
+        </div>
+
+        <!-- Polaroid Grid -->
+        <div class="scrapbook-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 30px; width: 100%; box-sizing: border-box;">
+          
+          <!-- Item 1 -->
+          <div class="gallery-item favorites" data-aos="zoom-in" style="position: relative;">
+            <div class="tape" style="position: absolute; top: -10px; left: 50%; transform: translateX(-50%); width: 80px; height: 20px; background: rgba(255, 255, 255, 0.6); box-shadow: 0 2px 5px rgba(0,0,0,0.05); z-index: 5;"></div>
+            <div class="polaroid-frame" onclick="openLightbox('photo12.jpeg', 'My gorgeous girlfriend ❤️')" style="background: #ffffff; padding: 15px 15px 20px 15px; box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12); cursor: pointer; border-radius: 4px; box-sizing: border-box; transition: transform 0.3s ease;">
+              <div style="width: 100%; height: auto; overflow: hidden; background-color: #f4eee0; border-radius: 2px;">
+                <img src="photo12.jpeg" alt="Anshu Memory 1" style="width: 100%; height: auto; object-fit: cover; object-position: center; display: block;">
+              </div>
+              <p class="handwritten-tag" style="font-size: 1.5rem; text-align: center; margin-top: 12px; color: #4a1525;">My gorgeous girlfriend ❤️</p>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="gallery-item crazy" data-aos="zoom-in" data-aos-delay="100" style="position: relative;">
+            <div class="tape" style="position: absolute; top: -10px; left: 50%; transform: translateX(-50%); width: 80px; height: 20px; background: rgba(255, 255, 255, 0.6); box-shadow: 0 2px 5px rgba(0,0,0,0.05); z-index: 5;"></div>
+            <div class="polaroid-frame" onclick="openLightbox('photo13.jpeg', 'Your adorable smile 😂')" style="background: #ffffff; padding: 15px 15px 20px 15px; box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12); cursor: pointer; border-radius: 4px; box-sizing: border-box; transition: transform 0.3s ease;">
+              <div style="width: 100%; height: auto; overflow: hidden; background-color: #f4eee0; border-radius: 2px;">
+                <img src="photo13.jpeg" alt="Anshu Memory 2" style="width: 100%; height: auto; object-fit: cover; object-position: center; display: block;">
+              </div>
+              <p class="handwritten-tag" style="font-size: 1.5rem; text-align: center; margin-top: 12px; color: #4a1525;">Your adorable smile 😂</p>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="gallery-item beautiful" data-aos="zoom-in" data-aos-delay="200" style="position: relative;">
+            <div class="tape" style="position: absolute; top: -10px; left: 50%; transform: translateX(-50%); width: 80px; height: 20px; background: rgba(255, 255, 255, 0.6); box-shadow: 0 2px 5px rgba(0,0,0,0.05); z-index: 5;"></div>
+            <div class="polaroid-frame" onclick="openLightbox('photo1.jpeg', 'Pure elegance and grace ✨')" style="background: #ffffff; padding: 15px 15px 20px 15px; box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12); cursor: pointer; border-radius: 4px; box-sizing: border-box; transition: transform 0.3s ease;">
+              <div style="width: 100%; height: auto; overflow: hidden; background-color: #f4eee0; border-radius: 2px;">
+                <img src="photo1.jpeg" alt="Anshu Memory 3" style="width: 100%; height: auto; object-fit: cover; object-position: center; display: block;">
+              </div>
+              <p class="handwritten-tag" style="font-size: 1.5rem; text-align: center; margin-top: 12px; color: #4a1525;">Pure elegance and grace ✨</p>
+            </div>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="gallery-item favorites" data-aos="zoom-in" data-aos-delay="300" style="position: relative;">
+            <div class="tape" style="position: absolute; top: -10px; left: 50%; transform: translateX(-50%); width: 80px; height: 20px; background: rgba(255, 255, 255, 0.6); box-shadow: 0 2px 5px rgba(0,0,0,0.05); z-index: 5;"></div>
+            <div class="polaroid-frame" onclick="openLightbox('photo2.jpeg', 'Always ruling my heart 🌸')" style="background: #ffffff; padding: 15px 15px 20px 15px; box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12); cursor: pointer; border-radius: 4px; box-sizing: border-box; transition: transform 0.3s ease;">
+              <div style="width: 100%; height: auto; overflow: hidden; background-color: #f4eee0; border-radius: 2px;">
+                <img src="photo2.jpeg" alt="Anshu Memory 4" style="width: 100%; height: auto; object-fit: cover; object-position: center; display: block;">
+              </div>
+              <p class="handwritten-tag" style="font-size: 1.5rem; text-align: center; margin-top: 12px; color: #4a1525;">Always ruling my heart 🌸</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Lightbox Modal -->
+      <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <span class="lightbox-close">&times;</span>
+        <img id="lightbox-img" src="" alt="Enlarged View">
+        <div id="lightbox-caption" class="lightbox-caption"></div>
+      </div>
+    </section>
+
+    <!-- 7. A LETTER FOR YOU -->
+    <section id="letter-section" class="section-padding">
+      <div class="container">
+        <div class="letter-container" data-aos="fade-up">
+          <div class="letter-stamp"><i class="fa-solid fa-heartbeat"></i></div>
+          <h2 class="letter-title">A Love Letter for My Dearest Girlfriend Anshu 💌</h2>
+          <div class="letter-content">
+            <p class="letter-line">My love, out of all the blessings in my life, having you as my girlfriend is by far the greatest. You bring so much joy, passion, and meaning into my everyday world.</p>
+            
+            <p class="letter-line">Every moment spent with you feels like magic. Your smile makes my heart skip a beat, and your hugs completely heal whatever stress or worries I carry. Thank you for loving me the way you do and for being my absolute everything.</p>
+            
+            <p class="letter-line">On your special day, I want to promise you that no matter what comes our way, I will always choose you, cherish you, and stand by your side forever.</p>
+            
+            <div class="letter-highlight">
+              "You are not just my girlfriend, Anshu...<br>
+              You are my soulmate, my future, and the absolute love of my life." 💖✨
+            </div>
+            
+            <p class="letter-closing">Loving you forever and always,<br><span class="signature-name">Your Boyfriend ❤️</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. FLOATING MUSIC PLAYER -->
+    <div id="floating-player" class="floating-player">
+      <div class="player-album-art">
+        <i class="fa-solid fa-music music-icon-spin"></i>
+      </div>
+      <div class="player-info">
+        <span class="song-title" id="song-title">Our Romantic Song</span>
+        <span class="song-status" id="song-status">Tap to Play</span>
+      </div>
+      <button class="player-btn" id="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+    </div>
+
+    <!-- Audio Element -->
+    <audio id="bg-music" loop>
+      <source src="Happy Birthday Poetry _ Birthday Wish Poem by Abhash Jha.mp3.mpeg" type="audio/mpeg">
+    </audio>
+
+    <!-- 9. THINGS I LOVE ABOUT YOU -->
+    <section id="love-bubbles" class="section-padding">
+      <div class="container text-center">
+        <h2 class="section-title" data-aos="fade-up">Things I Love About You, Anshu</h2>
+        <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Click any bubble and see!</p>
+
+        <div class="bubbles-wrapper">
+          <div class="bubble" onclick="popBubble(this)">Your Beautiful Smile 😊</div>
+          <div class="bubble" onclick="popBubble(this)">Your Cute Anger 😡</div>
+          <div class="bubble" onclick="popBubble(this)">Your Pure Heart 🤍</div>
+          <div class="bubble" onclick="popBubble(this)">Your Sweet Voice 🎶</div>
+          <div class="bubble" onclick="popBubble(this)">Your Loving Messages 📱</div>
+          <div class="bubble" onclick="popBubble(this)">The Way You Look at Me 👀</div>
+          <div class="bubble" onclick="popBubble(this)">Your Silly Quirks ✨</div>
+          <div class="bubble" onclick="popBubble(this)">Your Warm Hugs 🤗</div>
+          <div class="bubble" onclick="popBubble(this)">The Peace You Bring 🏡</div>
+          <div class="bubble" onclick="popBubble(this)">Making Me the Happiest Man ❤️</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. INTERACTIVE SURPRISE GIFT BOX -->
+    <section id="gift-section" class="section-padding">
+      <div class="container text-center">
+        <h2 class="section-title" data-aos="fade-up">One More Romantic Surprise Waiting...</h2>
+
+        <div class="gift-container" data-aos="zoom-in">
+          <div class="gift-box" id="gift-box">
+            <div class="gift-lid"></div>
+            <div class="gift-body"></div>
+            <div class="gift-ribbon"></div>
+          </div>
+          <button id="open-gift-btn" class="magical-btn margin-top-2">
+            <span>🎁 Open Your Gift</span>
+          </button>
+        </div>
+
+        <div id="gift-modal" class="gift-modal-content hidden">
+          <h3>My Deepest Birthday Wish For You, Anshu...</h3>
+          <div class="wish-list">
+            <p>🌸 May our love grow stronger with every passing day.</p>
+            <p>✨ May all your beautiful dreams come true.</p>
+            <p>💖 May you always stay as happy and glowing as you are today.</p>
+            <p>🥺 And may I always be the one holding your hand through it all.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 11. BIRTHDAY COUNTDOWN / CELEBRATION -->
+    <section id="birthday-cake-section" class="section-padding">
+      <div class="container text-center">
+        <h2 class="section-title" data-aos="fade-up">Today Belongs Entirely to My Princess, Anshu 🎂</h2>
+        <p class="section-subtitle" data-aos="fade-up">Make a wish, my love, and blow out the candle!</p>
+
+        <div class="cake-container" data-aos="zoom-in">
+          <div class="cake">
+            <div class="plate"></div>
+            <div class="layer layer-bottom"></div>
+            <div class="layer layer-middle"></div>
+            <div class="layer layer-top"></div>
+            <div class="icing"></div>
+            <div class="drips"></div>
+            <!-- Interactive Candle -->
+            <div class="candle" id="candle" onclick="blowCandle()">
+              <div class="flame" id="flame"></div>
+            </div>
+          </div>
+        </div>
+
+        <div id="wish-message" class="wish-message hidden">
+          <h3 class="glow-text">Your wish is already written in my heart...</h3>
+          <h1 class="grand-title">Happy Birthday, My Love <span class="friend-name">Anshu</span> ❤️</h1>
+        </div>
+      </div>
+    </section>
+
+    <!-- 12. FINAL CINEMATIC SECTION -->
+    <section id="cinematic-ending" class="cinematic-section">
+      <div class="cinematic-bg" style="background-image: url('photo3.jpeg');"></div>
+      <div class="cinematic-overlay"></div>
+      
+      <div class="cinematic-text-box">
+        <p class="cine-line line-1">If I could give you one thing in this world, Anshu...</p>
+        <p class="cine-line line-2">I would give you the ability to see how deeply and madly I love you.</p>
+        <p class="cine-line line-3">Perhaps then you would realize...</p>
+        <p class="cine-line line-4 gold-highlight">Just how precious you are to my existence. ❤️</p>
+        <h2 class="cine-final-title">Happy Birthday, <span class="friend-name">Anshu</span></h2>
+        <p class="cine-sub">I love you more than words can ever say.</p>
+      </div>
+    </section>
+
+    <!-- 13. FINAL PHOTO + SIGNATURE -->
+    <section id="signature-section" class="section-padding text-center">
+      <div class="container">
+        <div class="final-photo-wrapper" data-aos="zoom-in">
+          <img src="both.jpeg" alt="Final Portrait" class="final-photo">
+        </div>
+        <div class="signature-box" data-aos="fade-up">
+          <p class="made-with">Crafted with endless romance, lifetime promises, and pure love ❤️</p>
+          <div class="handwritten-signature">— <span class="your-name">Your Loving Boyfriend</span></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- External JS Libraries -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
